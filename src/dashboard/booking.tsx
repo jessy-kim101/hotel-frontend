@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { bookingAPI, type TIBooking } from '../features/booking/bookingApi';
-import ChangeRole from './room';
 import CreateBooking from "./booking/CreateBooking";
 
 const Booking = () => {

@@ -1,16 +1,17 @@
 import { Link } from "react-router"
-import { adminDrawerData } from "./drawerData"
+import { userDrawerData } from '../aside/drawerdata';
 
-const AdminDrawer = () => {
+
+const UserDrawer = () => {
     return (
         <div>
 
             <h2 className="text-xl font-bold text-white p-4 border-b-2 border-gray-700 ">
-                 Admin Dashboard 
+               User Dashboard
             </h2>
             <ul>
                 {
-                    adminDrawerData.map((item) => (
+                    userDrawerData.map((item) => (
                         <li key={item.id}>
                             <Link
                                 to={item.link}
@@ -29,4 +30,4 @@ const AdminDrawer = () => {
     )
 }
 
-export default AdminDrawer
+export default UserDrawer

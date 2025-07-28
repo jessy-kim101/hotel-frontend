@@ -1,9 +1,9 @@
-import { type RootState } from '../app/store';
+import { type RootState } from '../../app/store';
 import { useDispatch, useSelector } from 'react-redux';
-import { UserApi } from '../features/user/usersApi';
+import { UserApi } from '../../features/user/usersApi';
 import { useNavigate } from "react-router";
-import { logout } from '../features/login/userSlice';
-import UpdateProfile from './manageusers/UpdateProfile';
+import { logout } from '../../features/login/userSlice';
+import UpdateProfile from './UpdateProfile';
 
 
 

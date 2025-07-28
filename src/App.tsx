@@ -9,13 +9,16 @@ import AboutPage from './pages/AboutPage';
 import HotelPage from '../src/pages/hotelpage';
 import Verify from './pages/auth/VerifyUser';
 import BookingsPage from './pages/Bookingpage';
-import Profile from './dashboard/profile';
 import AdminDashboard from './dashboard/AdminDashboard';
 import GetRooms from './dashboard/room/GetRoom';
 import GetBooking from './dashboard/booking/GetBooking';
 import GetHotels from './dashboard/hotel';
 import GetTickets from './dashboard/ticket/GetTicket';
 import  GetUser from '../src/dashboard/user/GetUser';
+import UserDashboard from './dashboard/UserDashboard/userdashboard';
+import Userbooking from '../src/dashboard/UserDashboard/userbooking';
+
+import Profile from '../src/dashboard/UserDashboard/profile';
 
 function App() {
   return (
@@ -39,7 +42,6 @@ function App() {
           <Route path="/admin/dashboard" element={<AdminDashboard />}>
             <Route index element={<div>Admin Dashboard</div>} />
             <Route path="booking" element={<GetBooking />} />
-            <Route path="profile" element={<Profile />} />
             <Route path="room" element={<GetRooms />} />
             <Route path="hotel" element={<GetHotels />} />
              <Route path="ticket" element={<GetTickets />} />
@@ -49,7 +51,15 @@ function App() {
           </Route>
           
           {/* User Dashboard */}
-          <Route path="/user/dashboard/profile" element={<Profile />} />
+          <Route path="/user/dashboard" element={<UserDashboard />} />
+          <Route index element={<div>User Dashboard</div>} />
+          <Route path="userbooking" element={<Userbooking />} />
+          
+          <Route path="profile" element={<Profile />} />
+          
+
+          
+
         </Routes>
       </div>
     </Router>

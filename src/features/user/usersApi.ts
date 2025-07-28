@@ -40,6 +40,7 @@ export const UserApi = createApi({
     tagTypes:['Users'],
     endpoints:(builder)=>({
         createUsers:builder.mutation<TIUser, Partial<TIUser>>({
+            
             query:(newUser)=>({
                 url:'/auth/register',
                 method:'POST',

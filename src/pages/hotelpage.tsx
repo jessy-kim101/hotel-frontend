@@ -107,8 +107,10 @@ const HotelPage = () => {
                     
                     <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
+                      <a href="/bookings" className="cta-button">
                       
                       Book Now
+                      </a>
                     </button>
                   </div>
                 </div>
@@ -165,8 +167,10 @@ const HotelPage = () => {
             </button>
             
         <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors duration-200">
-            <a href="/contact" className="cta-button"></a>
+            <a href="/contact" className="cta-button">
+           
               Contact Us
+            </a>
             </button>
           </div>
         </section>
@@ -174,5 +178,5 @@ const HotelPage = () => {
     </div>
   );
 };
-
 export default HotelPage;
+

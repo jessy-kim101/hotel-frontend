@@ -66,11 +66,6 @@ const Hero = () => {
               <div className="w-72 h-72 bg-yellow-400 opacity-20 blur-3xl rounded-full -z-10"></div>
             </div>
 
-            {/* Floating Badge - moved to bottom right */}
-            <div className="absolute bottom-4 right-4 bg-white/10 border border-white/30 px-5 py-3 rounded-xl shadow-lg backdrop-blur-md transition-all duration-300 hover:scale-105">
-              <p className="text-white font-bold text-sm tracking-wide">Booking Tickets</p>
-              <p className="text-white/70 text-xs mt-1">Booking Information</p>
-            </div>
           </div>
         </div>
       </div>
