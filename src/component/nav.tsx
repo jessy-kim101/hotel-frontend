@@ -31,7 +31,7 @@ return (
           className="menu menu-sm dropdown-content bg-yellow-300 rounded-box mt-3 w-52 p-2 shadow-lg text-sm"
         >
           <li>
-            <NavLink to="/" className={({ isActive }) => (isActive ? activeClassname : inactiveClassname)}>
+            <NavLink to="/hero" className={({ isActive }) => (isActive ? activeClassname : inactiveClassname)}>
               Home
             </NavLink>
           </li>

@@ -23,14 +23,19 @@ const Hero = () => {
                 to="/more info"
                 className="group inline-flex items-center px-6 py-3 bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition duration-300 shadow-md"
               >
+              <a href="/about" className="cta-button">
                 More Information
+                
                 <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                </a>
               </NavLink>
               <NavLink
                 to="/help"
                 className="inline-flex items-center px-6 py-3 border border-white text-white rounded-full hover:bg-white hover:text-black transition duration-300 shadow-md"
               >
+                <a href="/contact" className="cta-button">
                 Help
+                </a>
               </NavLink>
             </div>
 

@@ -2,14 +2,14 @@ import { UserApi, type TIUser } from '../../features/user/usersApi';
 
 const GetUsers = () => {
     const { data: usersData, isLoading, error } = UserApi.useGetUsersQuery(
-        undefined, // No parameters needed for this query
+        undefined, 
         {
-            refetchOnMountOrArgChange: true, // Refetch data when component mounts or arguments change
-            pollingInterval: 60000, // Poll every 60 seconds to keep data fresh
+            refetchOnMountOrArgChange: true, 
+            pollingInterval: 60000, 
         }
     );
 
-    // Debug logging
+    
     console.log('Users Debug:', { usersData, isLoading, error });
 
 
@@ -67,7 +67,7 @@ const GetUsers = () => {
                                             className="btn btn-sm btn-primary text-blue-500"
                                             onClick={() => {
                                                 
-                                                // Add your action here - maybe edit/delete ticket
+                                                
                                                 console.log('Selected user:', user);
                                             }}
                                         >

@@ -10,6 +10,7 @@ const BookingsPage = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+     alert('Thank you for your message! We will get back to you soon.');
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

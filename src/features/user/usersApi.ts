@@ -61,7 +61,7 @@ export const UserApi = createApi({
     }),
     verifyUser:builder.mutation<TVerify, { email: string; code: string }>({
         query: ({ email,code }) => ({
-            url: '/auth/verify-email',
+            url: '/auth/verify',
             method: 'POST',
             body: { email,code }
         }),
@@ -69,7 +69,8 @@ export const UserApi = createApi({
     }),
     getUsers:builder.query<TIUser[], void>({
         query:()=>({
-            url:'/auth/get-users',
+            url:'/users',
+            transformResponse: (response: { users: TIUser[] }) => response.users,
             method:'GET'
         }),
         providesTags:['Users']

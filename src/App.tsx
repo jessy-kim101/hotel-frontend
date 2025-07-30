@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './component/nav';
-import Hero from './component/Hero';
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
 import ContactPage from './pages/Contactpage';
@@ -17,6 +16,10 @@ import GetTickets from './dashboard/ticket/GetTicket';
 import  GetUser from '../src/dashboard/user/GetUser';
 import UserDashboard from './dashboard/UserDashboard/userdashboard';
 import Userbooking from '../src/dashboard/UserDashboard/userbooking';
+import LandingPage from './pages/landingPage';
+import Home from '../src/component/Hero';
+import Userticket from '../src/dashboard/UserDashboard/userticket';
+
 
 import Profile from '../src/dashboard/UserDashboard/profile';
 
@@ -27,7 +30,9 @@ function App() {
         <Navbar />
         
         <Routes>
-          <Route path="/" element={<Hero />} />
+          {/* Public routes */}
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/hero" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/about" element={<AboutPage />} />
@@ -35,31 +40,24 @@ function App() {
           <Route path="/bookings" element={<BookingsPage />} />
           <Route path="/verify" element={<Verify />} />
           <Route path="/hotels" element={<HotelPage />} />
-          
-          {/* Nested Routes for Hotel Page */}
-          
+
           {/* Admin Dashboard with nested routes */}
           <Route path="/admin/dashboard" element={<AdminDashboard />}>
-            <Route index element={<div>Admin Dashboard</div>} />
+            <Route index element={<div>Admin Dashboard Home</div>} />
             <Route path="booking" element={<GetBooking />} />
             <Route path="room" element={<GetRooms />} />
             <Route path="hotel" element={<GetHotels />} />
-             <Route path="ticket" element={<GetTickets />} />
-             <Route path="user" element={<GetUser />} />
-
-
+            <Route path="ticket" element={<GetTickets />} />
+            <Route path="user" element={<GetUser />} />
           </Route>
-          
-          {/* User Dashboard */}
-          <Route path="/user/dashboard" element={<UserDashboard />} />
-          <Route index element={<div>User Dashboard</div>} />
-          <Route path="userbooking" element={<Userbooking />} />
-          
-          <Route path="profile" element={<Profile />} />
-          
 
-          
-
+          {/* User Dashboard with nested routes */}
+          <Route path="/user/dashboard" element={<UserDashboard />}>
+            <Route index element={<div>User Dashboard Home</div>} />
+            <Route path="userbooking" element={<Userbooking />} />
+            <Route path="userticket" element={<Userticket />} />
+            <Route path="profile" element={<Profile />} />
+          </Route>
         </Routes>
       </div>
     </Router>

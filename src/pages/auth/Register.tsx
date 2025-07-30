@@ -38,7 +38,8 @@ function Register() {
     });
 
     const onSubmit: SubmitHandler<RegisterInputs> = async (data) => {
-        console.log(data);
+        const { ...userData } = data;
+        console.log(userData);
         try {
             const response = await createUser(data).unwrap()
            console.log("response here...", response);
