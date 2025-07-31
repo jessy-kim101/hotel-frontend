@@ -35,11 +35,31 @@ return (
               Home
             </NavLink>
           </li>
-          <li>
-            <NavLink to="/admin/dashboard" className={({ isActive }) => (isActive ? activeClassname : inactiveClassname)}>
-              Dashboard
-            </NavLink>
-          </li>
+          <li className="relative group">
+  <button className="px-4 py-2 text-left w-full focus:outline-none hover:text-blue-500">
+    Dashboard ▼
+  </button>
+
+  <ul className="absolute left-0 hidden group-hover:block bg-white shadow-md mt-2 rounded z-10">
+    <li>
+      <NavLink
+        to="/admin/dashboard"
+        className={({ isActive }) => (isActive ? activeClassname : inactiveClassname)}
+      >
+        Admin Dashboard
+      </NavLink>
+    </li>
+    <li>
+      <NavLink
+        to="/user/dashboard"
+        className={({ isActive }) => (isActive ? activeClassname : inactiveClassname)}
+      >
+        User Dashboard
+      </NavLink>
+    </li>
+  </ul>
+</li>
+
           <li>
             <NavLink to="/hotels" className={({ isActive }) => (isActive ? activeClassname : inactiveClassname)}>
               Hotel
@@ -77,11 +97,31 @@ return (
             Home
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/admin/dashboard" className={({ isActive }) => (isActive ? activeClassname : inactiveClassname)}>
-            Dashboard
-          </NavLink>
-        </li>
+        <li className="relative group">
+  <button className="px-4 py-2 text-left w-full focus:outline-none hover:text-blue-500">
+    Dashboard ▼
+  </button>
+
+  <ul className="absolute left-0 hidden group-hover:block bg-white shadow-md mt-2 rounded z-10">
+    <li>
+      <NavLink
+        to="/admin/dashboard"
+        className={({ isActive }) => (isActive ? activeClassname : inactiveClassname)}
+      >
+        Admin Dashboard
+      </NavLink>
+    </li>
+    <li>
+      <NavLink
+        to="/user/dashboard"
+        className={({ isActive }) => (isActive ? activeClassname : inactiveClassname)}
+      >
+        User Dashboard
+      </NavLink>
+    </li>
+  </ul>
+</li>
+
         <li>
           <NavLink to="/hotels" className={({ isActive }) => (isActive ? activeClassname : inactiveClassname)}>
             Hotel

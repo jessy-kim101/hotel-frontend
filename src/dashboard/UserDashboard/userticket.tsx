@@ -10,6 +10,7 @@ const TicketsPage = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    alert('Thank you for your submission! We will review it shortly.');
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -17,6 +18,7 @@ const TicketsPage = () => {
     console.log('Ticket submitted:', formData);
     // TODO: send to backend API
     setFormData({ subject: '', category: '', description: '' });
+    
   };
 
   return (

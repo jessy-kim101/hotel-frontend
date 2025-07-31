@@ -1,4 +1,4 @@
-import { TbBrandGoogleAnalytics } from "react-icons/tb";
+
 import { FaTasks } from "react-icons/fa";
 import { FaUserCheck } from "react-icons/fa6";
 
@@ -31,11 +31,6 @@ export const userDrawerData: DrawerData[] = [
         icon: FaUserCheck,
         link: "profile"
     },
-    {
-        id: "UpdateProfile",
-        name: "UpdateProfile",
-        icon: TbBrandGoogleAnalytics,
-        link: "UpdateProfile"
-    }
+   
 
 ]

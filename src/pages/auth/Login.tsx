@@ -47,13 +47,15 @@ function Login() {
             dispatch(loginSuccess(response))
 
             console.log("Login response:", response);
+            setTimeout(() => {  
+                navigate('/',{
+                    state: { user: response.user }
+                })
+            }, 2000);
+            // Optionally show a success message
           
 
-            if (response.user.role === 'admin') {
-                navigate('/admin/dashboard/booking');
-            } else if (response.user.role === 'user') {
-                navigate('/user/dashboard/booking');
-            }
+          
 
         } catch (error) {
             console.log("Login error:", error);

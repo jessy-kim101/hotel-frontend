@@ -15,8 +15,10 @@ const GetBookings = () => {
 
 
 return (
-  <div className="min-h-screen bg-gray-100 py-8 px-4">
-    <div className="max-w-6xl mx-auto bg-light green p-6 rounded-lg shadow-md">
+  <div className="min-h-screen bg-green-100 py-8 px-4">
+
+    <div className="max-w-6xl mx-auto bg-blue-100 p-6 rounded-lg shadow-md">
+
       
       {/* Create Booking Button */}
       <div className="flex justify-between items-center mb-6">

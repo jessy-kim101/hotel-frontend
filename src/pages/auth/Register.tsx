@@ -41,7 +41,9 @@ function Register() {
         const { ...userData } = data;
         console.log(userData);
         try {
-            const response = await createUser(data).unwrap()
+            const { confirmPassword, ...userToSend } = data;
+const response = await createUser(userToSend).unwrap();
+
            console.log("response here...", response);
             // Redirect to verification page or login page
             setTimeout(() => {
@@ -117,12 +119,9 @@ function Register() {
                         <span className=" text-red-700 text-sm">{errors.confirmPassword.message}</span>
                     )}
 
-                    <button type="submit" className="btn btn-primary w-full mt-4" disabled={isLoading}>
-                        {isLoading ? (
-                            <>
-                                <span className="loading loading-spinner text-primary" /> Registering...
-                            </>
-                        ) : "Register"}
+                    <button type="submit" className="btn btn-primary w-full mt-4" >
+                        
+                           Register
                     </button>
 
                 </form>
