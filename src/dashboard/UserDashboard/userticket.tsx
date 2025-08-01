@@ -18,7 +18,7 @@ const TicketsPage = () => {
     console.log('Ticket submitted:', formData);
     // TODO: send to backend API
     setFormData({ subject: '', category: '', description: '' });
-    
+    alert('Thank you for your submission! We will review it shortly.');
   };
 
   return (

@@ -44,6 +44,12 @@ export const adminDrawerData: DrawerData[] = [
         icon: FaUserCheck,
         link: "user"
     },
+     {
+        id: "profile",
+        name: "profile",
+        icon: FaUserCheck,
+        link: "profile"
+    },
 
     
  

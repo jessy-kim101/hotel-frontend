@@ -49,6 +49,7 @@ function App() {
             <Route path="hotel" element={<GetHotels />} />
             <Route path="ticket" element={<GetTickets />} />
             <Route path="user" element={<GetUser />} />
+            <Route path="profile" element={<Profile />} />
           </Route>
 
           {/* User Dashboard with nested routes */}

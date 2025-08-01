@@ -1,9 +1,9 @@
-import { type RootState } from "../../app/store";
+import { type RootState } from '../app/store';
 import { useDispatch, useSelector } from 'react-redux';
-import { UserApi } from '../../features/user/usersApi';
+import { UserApi } from '../features/user/usersApi';
 import { useNavigate } from "react-router";
-import { logout } from "../../features/login/userSlice";
-import UpdateProfile from '../../dashboard/UserDashboard/UpdateProfile';
+import { logout } from '../features/login/userSlice';
+import UpdateProfile from '../dashboard/UpdateProfile';
 
 
 
@@ -28,7 +28,7 @@ const Profile = () => {
                 <p>Error loading profile</p>
             ) : (
                 <div className="bg-white p-8 rounded-2xl shadow-lg max-w-2xl mx-auto mt-10 h-auto">
-  <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">User Profile</h2>
+  <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Admin Profile</h2>
 
   <div className="flex flex-col items-center mb-6">
     <div className="w-24 h-24 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-3xl font-bold mb-4 shadow-inner">
@@ -41,15 +41,15 @@ const Profile = () => {
  <div className="border-t border-gray-200 pt-4 space-y-3">
   <p
     className="text-gray-700 hover:text-blue-600 cursor-pointer transition"
-    onClick={() => alert(`User ID: Bob Collimore`)}
+    onClick={() => alert(`Admin ID: Jessica Kimani`)}
   >
-    <span className="font-medium">User ID:</span> Bob Collimore
+    <span className="font-bold">Admin ID:</span> Jessica Kimani
   </p>
   <p
     className="text-gray-700 hover:text-blue-600 cursor-pointer transition"
-    onClick={() => alert(`Role: user`)}
+    onClick={() => alert(`Role: Admin`)}
   >
-    <span className="font-medium">Role:</span> user
+    <span className="font-bold">Role:</span> Admin
   </p>
 
 
